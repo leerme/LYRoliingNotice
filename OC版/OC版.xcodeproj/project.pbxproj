@@ -13,6 +13,10 @@
 		60D33AC21FE26D3C00086F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60D33AC11FE26D3C00086F15 /* Assets.xcassets */; };
 		60D33AC51FE26D3C00086F15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60D33AC31FE26D3C00086F15 /* LaunchScreen.storyboard */; };
 		60D33AC81FE26D3C00086F15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D33AC71FE26D3C00086F15 /* main.m */; };
+		60D33AD31FE364DC00086F15 /* LYRollingNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D33AD21FE364DC00086F15 /* LYRollingNoticeView.m */; };
+		60D33AD71FE3691F00086F15 /* LYRollingNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D33AD61FE3691F00086F15 /* LYRollingNoticeViewController.m */; };
+		60D33ADB1FE37B6C00086F15 /* DelegateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D33ADA1FE37B6C00086F15 /* DelegateManager.m */; };
+		60D33ADE1FE3B80200086F15 /* LYNotiveViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D33ADD1FE3B80200086F15 /* LYNotiveViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		60D33AC41FE26D3C00086F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60D33AC61FE26D3C00086F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60D33AC71FE26D3C00086F15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		60D33AD11FE364DC00086F15 /* LYRollingNoticeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRollingNoticeView.h; sourceTree = "<group>"; };
+		60D33AD21FE364DC00086F15 /* LYRollingNoticeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYRollingNoticeView.m; sourceTree = "<group>"; };
+		60D33AD51FE3691F00086F15 /* LYRollingNoticeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRollingNoticeViewController.h; sourceTree = "<group>"; };
+		60D33AD61FE3691F00086F15 /* LYRollingNoticeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYRollingNoticeViewController.m; sourceTree = "<group>"; };
+		60D33AD91FE37B6C00086F15 /* DelegateManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DelegateManager.h; sourceTree = "<group>"; };
+		60D33ADA1FE37B6C00086F15 /* DelegateManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelegateManager.m; sourceTree = "<group>"; };
+		60D33ADC1FE3B80200086F15 /* LYNotiveViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYNotiveViewCell.h; sourceTree = "<group>"; };
+		60D33ADD1FE3B80200086F15 /* LYNotiveViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYNotiveViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +70,49 @@
 		60D33AB71FE26D3C00086F15 /* OC版 */ = {
 			isa = PBXGroup;
 			children = (
-				60D33AB81FE26D3C00086F15 /* AppDelegate.h */,
-				60D33AB91FE26D3C00086F15 /* AppDelegate.m */,
+				60D33ACF1FE2816300086F15 /* LYRollingNoticeDemo */,
 				60D33ABB1FE26D3C00086F15 /* ViewController.h */,
 				60D33ABC1FE26D3C00086F15 /* ViewController.m */,
+				60D33AD91FE37B6C00086F15 /* DelegateManager.h */,
+				60D33ADA1FE37B6C00086F15 /* DelegateManager.m */,
 				60D33ABE1FE26D3C00086F15 /* Main.storyboard */,
-				60D33AC11FE26D3C00086F15 /* Assets.xcassets */,
-				60D33AC31FE26D3C00086F15 /* LaunchScreen.storyboard */,
 				60D33AC61FE26D3C00086F15 /* Info.plist */,
 				60D33AC71FE26D3C00086F15 /* main.m */,
+				60D33AC11FE26D3C00086F15 /* Assets.xcassets */,
+				60D33AD81FE3692F00086F15 /* Other */,
 			);
 			path = "OC版";
+			sourceTree = "<group>";
+		};
+		60D33ACF1FE2816300086F15 /* LYRollingNoticeDemo */ = {
+			isa = PBXGroup;
+			children = (
+				60D33AD41FE368FC00086F15 /* LYRollingNotice */,
+				60D33AD51FE3691F00086F15 /* LYRollingNoticeViewController.h */,
+				60D33AD61FE3691F00086F15 /* LYRollingNoticeViewController.m */,
+			);
+			path = LYRollingNoticeDemo;
+			sourceTree = "<group>";
+		};
+		60D33AD41FE368FC00086F15 /* LYRollingNotice */ = {
+			isa = PBXGroup;
+			children = (
+				60D33AD11FE364DC00086F15 /* LYRollingNoticeView.h */,
+				60D33AD21FE364DC00086F15 /* LYRollingNoticeView.m */,
+				60D33ADC1FE3B80200086F15 /* LYNotiveViewCell.h */,
+				60D33ADD1FE3B80200086F15 /* LYNotiveViewCell.m */,
+			);
+			path = LYRollingNotice;
+			sourceTree = "<group>";
+		};
+		60D33AD81FE3692F00086F15 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				60D33AB81FE26D3C00086F15 /* AppDelegate.h */,
+				60D33AB91FE26D3C00086F15 /* AppDelegate.m */,
+				60D33AC31FE26D3C00086F15 /* LaunchScreen.storyboard */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,8 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60D33AD71FE3691F00086F15 /* LYRollingNoticeViewController.m in Sources */,
+				60D33ADE1FE3B80200086F15 /* LYNotiveViewCell.m in Sources */,
 				60D33ABD1FE26D3C00086F15 /* ViewController.m in Sources */,
+				60D33AD31FE364DC00086F15 /* LYRollingNoticeView.m in Sources */,
 				60D33AC81FE26D3C00086F15 /* main.m in Sources */,
+				60D33ADB1FE37B6C00086F15 /* DelegateManager.m in Sources */,
 				60D33ABA1FE26D3C00086F15 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

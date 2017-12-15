@@ -7,23 +7,35 @@
 //
 
 #import "ViewController.h"
+#import "DelegateManager.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray *informationArray;
+@property (strong, nonatomic) DelegateManager *delegateManager;
 
 @end
 
 @implementation ViewController
 
+#pragma mark - Lift Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    _informationArray = @[@"LYRollingNoticeDemo"];
+    self.tableView.rowHeight = 40;
+    self.tableView.delegate = self.delegateManager;
+    self.tableView.dataSource = self.delegateManager;
+    
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (DelegateManager *)delegateManager{
+    if (!_delegateManager) {
+        _delegateManager = [DelegateManager delegateManagerWithInformations:self.informationArray navigationController:self.navigationController];
+    }
+    return _delegateManager;
 }
-
 
 @end
